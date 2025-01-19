@@ -14,7 +14,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useAddContentType } from "@/lib/api/mutation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function DialogDemo({
   isContentTypeAvailable,
@@ -23,8 +23,11 @@ export function DialogDemo({
 }) {
   const { mutate: addContentType, isPending } = useAddContentType();
   const [contentType, setContentType] = useState<string>("");
+
+  useEffect(() => {}, [isContentTypeAvailable]);
+
   return (
-    <Dialog defaultOpen={true}>
+    <Dialog defaultOpen={isContentTypeAvailable}>
       <DialogContent
         className="sm:max-w-[425px]"
         onInteractOutside={(e) => e.preventDefault()}

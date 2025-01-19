@@ -39,9 +39,7 @@ export async function summarize(
   });
 
   // Invoke
-  const result = await chain.invoke({ context: docs });
+  const summary = await chain.invoke({ context: docs });
 
-  console.log(result);
-
-  return { result, docs };
+  return { summary, docs };
 }

@@ -67,6 +67,30 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-primary;
   }
+}
+
+.glassy-container {
+  padding: 20px;
+  backdrop-filter: blur(10px) saturate(150%);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  padding: 30px;
+  backdrop-filter: blur(12px) saturate(180%);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 85, 254, 0.2),
+    rgba(255, 255, 255, 0.03)
+  );
+  border: 1px solid rgba(0, 85, 254, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 85, 254, 0.3), 0 4px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }

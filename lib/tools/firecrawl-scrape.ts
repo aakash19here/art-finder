@@ -26,7 +26,14 @@ export async function scrape(urls: string[]) {
       sourceUrls.push(url);
       sourceTitles.push(result.title ?? "");
     } else {
-      console.error("Error scraping URL", url, result.error);
+      console.log("Error scraping URL", url, result.error);
+      return {
+        markdown: "",
+        metadata: {
+          sourceUrls: [],
+          sourceTitles: [],
+        },
+      };
     }
   }
 

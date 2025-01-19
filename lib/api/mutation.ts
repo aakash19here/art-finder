@@ -10,6 +10,7 @@ export function useAddContentType() {
       return await axios.post("/api/search", data);
     },
     onSuccess: () => {
+      window.location.reload();
       toast.success("Content type added successfully");
     },
     onError: (error) => {
